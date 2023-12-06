@@ -20,19 +20,27 @@ const CardContainer = () => {
   return (
     <div className="container">
       <div>
-        <input type="search" onChange={handleChange} />
+        <input
+          type="search"
+          placeholder="search"
+          onChange={handleChange}
+          className="form-control"
+        />
       </div>
 
-      <div>
-        {data.filter(filteredFunc).map(({ name, img, statistics }) => (
-          <PlayerCard
-            key={name}
-            name={name}
-            img={img}
-            statistics={statistics}
-          />
-        ))}
-      </div>
+      {value ? (
+        <div>
+          {data.filter(filteredFunc).map(({ name, img, songs }) => (
+            <PlayerCard key={name} name={name} img={img} songs={songs} />
+          ))}
+        </div>
+      ) : (
+        <div>
+          {data.map(({ name, img, songs }) => (
+            <PlayerCard key={name} name={name} img={img} songs={songs} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

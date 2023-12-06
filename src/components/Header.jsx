@@ -1,11 +1,17 @@
 import React from "react";
-import nbaLogo from "../assets/nba-logo.png";
+import rockLogo from "../assets/rock-logo.jpg";
 
 const Header = () => {
   return (
     <div>
-      <img src={nbaLogo} alt="logo" />
-      <h1>NBA LEGENDS</h1>
+      <img
+        className="rock-logo"
+        src={rockLogo}
+        alt="logo"
+        width="100%"
+        height="200px"
+      />
+      <h1 className="alt-rock-title">ALTERNATIVE ROCK LEGENDS 🎸</h1>
     </div>
   );
 };
