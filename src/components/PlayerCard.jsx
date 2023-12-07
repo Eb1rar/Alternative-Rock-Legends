@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Audio from "./Audio";
 
-const PlayerCard = ({ name, img, songs }) => {
+const PlayerCard = ({ name, img, wiki, songs, audio }) => {
   const [displaySongs, setDisplaySongs] = useState(false);
 
   return (
@@ -25,13 +26,10 @@ const PlayerCard = ({ name, img, songs }) => {
         </div>
       )}
       <div>
-        <a
-          target="blank"
-          href={`https://en.wikipedia.org/wiki/${name}`}
-          className="stars-names"
-        >
+        <a target="blank" href={wiki} className="stars-names">
           {name}
         </a>
+        <Audio audio={audio} />
       </div>
     </div>
   );

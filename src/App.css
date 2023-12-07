@@ -60,6 +60,7 @@ input {
   font-weight: bold;
   display: flex;
   flex-wrap: wrap;
+  color: white;
 }
 .stars-images {
   object-fit: cover;
@@ -84,4 +85,53 @@ input {
 input::placeholder {
   color: gray;
   font-size: 1.4rem;
+}
+
+/* CSS */
+.btn-audio {
+  background-color: white;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0.2rem;
+  margin-top: 1rem;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+.btn-audio:hover {
+  background-color: rgba(255, 255, 255, 0.692);
+}
+.btn-audio:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+
+.btn-audio:active {
+  background-color: #f7f7f7;
+  border-color: #000000;
+  transform: scale(0.96);
+}
+
+.btn-audio:disabled {
+  border-color: #dddddd;
+  color: #dddddd;
+  cursor: not-allowed;
+  opacity: 1;
 }
